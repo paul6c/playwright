@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Tests - chrome
 on:
   push:
     branches: [ main, master ]
