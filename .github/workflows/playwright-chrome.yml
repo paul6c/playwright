@@ -1,11 +1,10 @@
 name: Playwright Tests - chrome
 on:
-  push:
-    branches: [ main, master ]
+
   pull_request:
     branches: [ main, master ]
   schedule:
-    - cron: '0 0 * * *' # every day at midnight
+    - cron: '0 8 * * *' # every day at midnight
 
 jobs:
   test:
