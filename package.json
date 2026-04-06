@@ -7,7 +7,8 @@
     "testLocal": "ENV=local npx playwright test --project=chromium",
     "testProd": "ENV=prod npx playwright test",
     "testFileSetupLocal": "cross-env ENV=local npx playwright test -g 'sample env file setup' --project=chromium",
-    "testUILocal": "ENV=local npx playwright test --ui"
+    "testUILocal": "ENV=local npx playwright test --ui",
+    "stagingChromium": " cross-env ENV=local npx playwright test --project=staging-chromium"
   },
   "keywords": [],
   "author": "",

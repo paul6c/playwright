@@ -11,14 +11,14 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 5
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
       [
         "html",
         {
-          "outputFolder": "playwright-report/March-2026/2026-03-15_01-08",
+          "outputFolder": "playwright-report/April-2026/2026-04-06_15-32",
           "open": "never"
         }
       ],
@@ -44,7 +44,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 5
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -60,7 +60,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 5
+          "actualWorkers": 1
         },
         "id": "firefox",
         "name": "firefox",
@@ -76,10 +76,58 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 5
+          "actualWorkers": 1
         },
         "id": "webkit",
         "name": "webkit",
+        "testDir": "/Users/paulcuezon/Documents/playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/paulcuezon/Documents/playwright/screenshots",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "staging-chromium",
+        "name": "staging-chromium",
+        "testDir": "/Users/paulcuezon/Documents/playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/paulcuezon/Documents/playwright/screenshots",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api-local",
+        "name": "api-local",
+        "testDir": "/Users/paulcuezon/Documents/playwright/tests/API",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/paulcuezon/Documents/playwright/screenshots",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "hotfix-chromium",
+        "name": "hotfix-chromium",
         "testDir": "/Users/paulcuezon/Documents/playwright/tests",
         "testIgnore": [],
         "testMatch": [
@@ -98,302 +146,59 @@
   },
   "suites": [
     {
-      "title": "example.spec.ts",
-      "file": "example.spec.ts",
+      "title": "API/get.spec.ts",
+      "file": "API/get.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "playwright has title",
-          "ok": false,
+          "title": "GET list of users",
+          "ok": true,
           "tags": [],
           "tests": [
             {
               "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
+              "projectId": "api-local",
+              "projectName": "api-local",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 10,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 7501,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Playwright11/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Playwright11/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n    at /Users/paulcuezon/Documents/playwright/tests/example.spec.ts:7:22",
-                    "location": {
-                      "file": "/Users/paulcuezon/Documents/playwright/tests/example.spec.ts",
-                      "column": 22,
-                      "line": 7
-                    },
-                    "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m\n \u001b[90m  6 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Playwright11/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m test(\u001b[32m'playwright get started link'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 449,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "location": {
-                        "file": "/Users/paulcuezon/Documents/playwright/tests/example.spec.ts",
-                        "column": 22,
-                        "line": 7
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Playwright11/\u001b[39m\nReceived string:  \u001b[31m\"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Fast and reliable end-to-end testing for modern web apps | Playwright\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  5 |\u001b[39m\n \u001b[90m  6 |\u001b[39m   \u001b[90m// Expect a title \"to contain\" a substring.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Playwright11/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m test(\u001b[32m'playwright get started link'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/paulcuezon/Documents/playwright/tests/example.spec.ts:7:22\u001b[22m"
+                      "text": "https://reqres.in/api/users\n"
+                    },
+                    {
+                      "text": "200\n"
+                    },
+                    {
+                      "text": "{\n  page: 1,\n  per_page: 6,\n  total: 12,\n  total_pages: 2,\n  data: [\n    {\n      id: 1,\n      email: 'george.bluth@reqres.in',\n      first_name: 'George',\n      last_name: 'Bluth',\n      avatar: 'https://reqres.in/img/faces/1-image.jpg'\n    },\n    {\n      id: 2,\n      email: 'janet.weaver@reqres.in',\n      first_name: 'Janet',\n      last_name: 'Weaver',\n      avatar: 'https://reqres.in/img/faces/2-image.jpg'\n    },\n    {\n      id: 3,\n      email: 'emma.wong@reqres.in',\n      first_name: 'Emma',\n      last_name: 'Wong',\n      avatar: 'https://reqres.in/img/faces/3-image.jpg'\n    },\n    {\n      id: 4,\n      email: 'eve.holt@reqres.in',\n      first_name: 'Eve',\n      last_name: 'Holt',\n      avatar: 'https://reqres.in/img/faces/4-image.jpg'\n    },\n    {\n      id: 5,\n      email: 'charles.morris@reqres.in',\n      first_name: 'Charles',\n      last_name: 'Morris',\n      avatar: 'https://reqres.in/img/faces/5-image.jpg'\n    },\n    {\n      id: 6,\n      email: 'tracey.ramos@reqres.in',\n      first_name: 'Tracey',\n      last_name: 'Ramos',\n      avatar: 'https://reqres.in/img/faces/6-image.jpg'\n    }\n  ],\n  support: {\n    url: 'https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral',\n    text: 'Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO.'\n  },\n  _meta: {\n    powered_by: 'ReqRes',\n    docs_url: 'https://app.reqres.in/documentation',\n    upgrade_url: 'https://app.reqres.in/upgrade',\n    example_url: 'https://app.reqres.in/examples/notes-app',\n    variant: 'v1_a',\n    message: 'Your data persists here. Add auth, logs, and custom schemas to build a real backend.',\n    cta: {\n      label: 'See example app',\n      url: 'https://app.reqres.in/examples/notes-app'\n    },\n    context: 'legacy_success'\n  }\n}\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-03-14T17:08:20.291Z",
+                  "startTime": "2026-04-06T07:54:29.060Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/paulcuezon/Documents/playwright/screenshots/example-playwright-has-title-chromium/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/paulcuezon/Documents/playwright/screenshots/example-playwright-has-title-chromium/error-context.md"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/paulcuezon/Documents/playwright/screenshots/get-GET-list-of-users-api-local/trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/paulcuezon/Documents/playwright/tests/example.spec.ts",
-                    "column": 22,
-                    "line": 7
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "a30a6eba6312f6b87ea5-7bf4442fb29134fe434e",
-          "file": "example.spec.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "playwright get started link",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 3483,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-03-14T17:08:20.293Z",
-                  "annotations": [],
-                  "attachments": []
+                  ]
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a30a6eba6312f6b87ea5-38430fb501c9b4d8d311",
-          "file": "example.spec.ts",
-          "line": 10,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "test.spec.ts",
-      "file": "test.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "sample env file setup",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 8375,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Username from env file: admin_user_local\n"
-                    },
-                    {
-                      "text": "admin_user_local\n"
-                    },
-                    {
-                      "text": "Password from env file: password_user_local\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-03-14T17:08:20.292Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b72ba50710186a3d173d-fcc6c5345f3f800b0740",
-          "file": "test.spec.ts",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "sample google test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 1647,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "https://www.google.com/?zx=1773508102658&no_sw_cr=1\n"
-                    },
-                    {
-                      "text": "Google test executed successfully\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-03-14T17:08:20.297Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b72ba50710186a3d173d-ba3b4c8d7d6be0159a59",
-          "file": "test.spec.ts",
-          "line": 12,
-          "column": 5
-        },
-        {
-          "title": "test if else statement demo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
-                  "status": "passed",
-                  "duration": 8287,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Practice Software Testing - Toolshop - v5.0\n"
-                    },
-                    {
-                      "text": "Title matched - Test Passed\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-03-14T17:08:20.295Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b72ba50710186a3d173d-de4f47cd0b4aef7558ba",
-          "file": "test.spec.ts",
-          "line": 21,
-          "column": 5
-        },
-        {
-          "title": "test for loop statement demo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 11635,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "22\n"
-                    },
-                    {
-                      "text": "Hand Tools,10 and Hammer\n"
-                    },
-                    {
-                      "text": "false\n"
-                    },
-                    {
-                      "text": "Hammer,6 and Hammer\n"
-                    },
-                    {
-                      "text": "true\n"
-                    },
-                    {
-                      "text": "Filter found: Hammer\n"
-                    },
-                    {
-                      "text": "19\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-03-14T17:08:23.593Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b72ba50710186a3d173d-245c2a959c5c68b4d2ed",
-          "file": "test.spec.ts",
-          "line": 34,
+          "id": "c00c741813ba28210778-47e4452a202e85750a62",
+          "file": "API/get.spec.ts",
+          "line": 15,
           "column": 5
         }
       ]
@@ -401,11 +206,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-03-14T17:08:19.990Z",
-    "duration": 15269.296999999999,
-    "expected": 5,
+    "startTime": "2026-04-06T07:54:28.486Z",
+    "duration": 1053.1740000001155,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

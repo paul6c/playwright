@@ -36,9 +36,9 @@ export default defineConfig({
   reporter: [['html', {
         outputFolder: 'playwright-report/'+ monthFolder + '/' + formattedDate,
         open: 'never'}],
-
       ['json', { outputFile: 'results.json' }], 
       ['./utils/my-awesome-reporter.ts']],// this will only generate a json file that has a execution result of the tests
+      
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   outputDir: 'screenshots/', // this will store the screenshots and videos
   use: {
@@ -54,7 +54,8 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'],
+       },
     },
 
     {
@@ -66,6 +67,24 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+      name: 'staging-chromium',
+      use: { ...devices['Desktop Chrome'], baseURL: process.env.url },
+    },
+    {
+      name: 'api-local',
+      testDir: './tests/API',
+      use: { ...devices['Desktop Chrome'], 
+        baseURL: process.env.api_url,
+        extraHTTPHeaders: {
+         'x-api-key': process.env.api_key || '',
+        },
+       },
+    },
+    {
+      name: 'hotfix-chromium',
+      use: { ...devices['Desktop Chrome'], baseURL: process.env.url },
+    }
 
     /* Test against mobile viewports. */
     // {

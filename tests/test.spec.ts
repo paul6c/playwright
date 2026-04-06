@@ -61,3 +61,11 @@ test('test for loop statement demo', async ({ page })=>{
     }
 
 })
+
+test('test for the pom model demo', async ({ page })=>{
+    // const URL = process.env.url || "https://practicesoftwaretesting.com/";
+    await page.goto("/");
+     const title=await page.title();
+     console.log(title);
+     expect(title).toBe('Practice Software Testing - Toolshop - v5.0');
+})
