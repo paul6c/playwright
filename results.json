@@ -152,7 +152,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "GET list of users",
+          "title": "GET list of products",
           "ok": true,
           "tags": [],
           "tests": [
@@ -164,31 +164,31 @@
               "projectName": "api-local",
               "results": [
                 {
-                  "workerIndex": 10,
+                  "workerIndex": 13,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 449,
+                  "duration": 1731,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "https://reqres.in/api/users\n"
+                      "text": "https://reqres.in/api/products\n"
                     },
                     {
                       "text": "200\n"
                     },
                     {
-                      "text": "{\n  page: 1,\n  per_page: 6,\n  total: 12,\n  total_pages: 2,\n  data: [\n    {\n      id: 1,\n      email: 'george.bluth@reqres.in',\n      first_name: 'George',\n      last_name: 'Bluth',\n      avatar: 'https://reqres.in/img/faces/1-image.jpg'\n    },\n    {\n      id: 2,\n      email: 'janet.weaver@reqres.in',\n      first_name: 'Janet',\n      last_name: 'Weaver',\n      avatar: 'https://reqres.in/img/faces/2-image.jpg'\n    },\n    {\n      id: 3,\n      email: 'emma.wong@reqres.in',\n      first_name: 'Emma',\n      last_name: 'Wong',\n      avatar: 'https://reqres.in/img/faces/3-image.jpg'\n    },\n    {\n      id: 4,\n      email: 'eve.holt@reqres.in',\n      first_name: 'Eve',\n      last_name: 'Holt',\n      avatar: 'https://reqres.in/img/faces/4-image.jpg'\n    },\n    {\n      id: 5,\n      email: 'charles.morris@reqres.in',\n      first_name: 'Charles',\n      last_name: 'Morris',\n      avatar: 'https://reqres.in/img/faces/5-image.jpg'\n    },\n    {\n      id: 6,\n      email: 'tracey.ramos@reqres.in',\n      first_name: 'Tracey',\n      last_name: 'Ramos',\n      avatar: 'https://reqres.in/img/faces/6-image.jpg'\n    }\n  ],\n  support: {\n    url: 'https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral',\n    text: 'Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO.'\n  },\n  _meta: {\n    powered_by: 'ReqRes',\n    docs_url: 'https://app.reqres.in/documentation',\n    upgrade_url: 'https://app.reqres.in/upgrade',\n    example_url: 'https://app.reqres.in/examples/notes-app',\n    variant: 'v1_a',\n    message: 'Your data persists here. Add auth, logs, and custom schemas to build a real backend.',\n    cta: {\n      label: 'See example app',\n      url: 'https://app.reqres.in/examples/notes-app'\n    },\n    context: 'legacy_success'\n  }\n}\n"
+                      "text": "{\n  page: 1,\n  per_page: 6,\n  total: 12,\n  total_pages: 2,\n  data: [\n    {\n      id: 1,\n      name: 'cerulean',\n      year: 2000,\n      color: '#98B2D1',\n      pantone_value: '15-4020'\n    },\n    {\n      id: 2,\n      name: 'fuchsia rose',\n      year: 2001,\n      color: '#C74375',\n      pantone_value: '17-2031'\n    },\n    {\n      id: 3,\n      name: 'true red',\n      year: 2002,\n      color: '#BF1932',\n      pantone_value: '19-1664'\n    },\n    {\n      id: 4,\n      name: 'aqua sky',\n      year: 2003,\n      color: '#7BC4C4',\n      pantone_value: '14-4811'\n    },\n    {\n      id: 5,\n      name: 'tigerlily',\n      year: 2004,\n      color: '#E2583E',\n      pantone_value: '17-1456'\n    },\n    {\n      id: 6,\n      name: 'blue turquoise',\n      year: 2005,\n      color: '#53B0AE',\n      pantone_value: '15-5217'\n    }\n  ],\n  support: {\n    url: 'https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral',\n    text: 'Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO.'\n  }\n}\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-06T07:54:29.060Z",
+                  "startTime": "2026-04-06T10:04:53.646Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/Users/paulcuezon/Documents/playwright/screenshots/get-GET-list-of-users-api-local/trace.zip"
+                      "path": "/Users/paulcuezon/Documents/playwright/screenshots/get-GET-list-of-products-api-local/trace.zip"
                     }
                   ]
                 }
@@ -196,9 +196,9 @@
               "status": "expected"
             }
           ],
-          "id": "c00c741813ba28210778-47e4452a202e85750a62",
+          "id": "c00c741813ba28210778-5231778e838c701260bb",
           "file": "API/get.spec.ts",
-          "line": 15,
+          "line": 49,
           "column": 5
         }
       ]
@@ -206,8 +206,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-06T07:54:28.486Z",
-    "duration": 1053.1740000001155,
+    "startTime": "2026-04-06T10:04:53.136Z",
+    "duration": 2268.231999998912,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
